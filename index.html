@@ -1,33 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Michael Pachowski</title>
+
+  <!-- Smooth Scroll -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #f4f4f4;
+    html {
+      scroll-behavior: smooth;
     }
-    header {
-      background-color: #333;
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
-      padding: 1rem;
+      background: linear-gradient(-45deg, #1d2b64, #f8cdda, #4facfe, #00f2fe);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header img {
+      width: 200px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      margin-top: 1rem;
+    }
+
+    main {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
       text-align: center;
     }
-    main {
-      margin-top: 2rem;
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Michael Pachowski</h1>
+    <img src="linkedin.png" alt="A photo of Michael">
   </header>
+
   <main>
-     <img src="linkedin.png" alt="A photo of Michael" width="200">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm Michael Pachowski — welcome to my personal website.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are some cool things I’ve built and collaborated on.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Find me on LinkedIn or shoot me an email to connect!</p>
+    </section>
   </main>
+
 </body>
 </html>
